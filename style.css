@@ -294,3 +294,5 @@ body.present .slide.active{animation:slideIn .55s cubic-bezier(.2,.7,.2,1) both}
 @media (prefers-reduced-motion:reduce){.par{transform:none}.waves{animation:none}.progress{display:none}}
 
 .hero-photo .photo img{--ps:1.04}
+
+.svc .ph img{object-position:50% 25%}
