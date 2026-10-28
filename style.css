@@ -140,7 +140,7 @@ a.chip:hover{background:rgba(217,180,91,.18)}
 /* ---------- services ---------- */
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
 .svc{overflow:hidden;display:flex;flex-direction:column}
-.svc .ph{aspect-ratio:4/3;overflow:hidden;position:relative}
+.svc .ph{aspect-ratio:1/1;overflow:hidden;position:relative}
 .svc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .svc:hover .ph img{transform:scale(1.06)}
 .svc .tx{padding:22px 24px 26px}
@@ -247,3 +247,52 @@ body.present .pres-ui{display:flex;position:fixed;bottom:18px;left:50%;transform
   *{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- service image crops ---------- */
+.svc:nth-child(1) .ph img{object-position:16% 28%}
+.svc:nth-child(2) .ph img{object-position:8% 100%}
+.svc:nth-child(3) .ph img{object-position:50% 14%}
+@media (max-width:980px){.svc .ph{aspect-ratio:4/3}.svc:nth-child(3) .ph img{object-position:50% 20%}}
+
+/* ---------- motion ---------- */
+.progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:70;transform-origin:0 50%;transform:scaleX(0);background:var(--gold-grad);pointer-events:none}
+.top{transition:background .3s,box-shadow .3s}
+.top.scrolled{background:rgba(3,10,43,.94);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.nav a.active{color:var(--gold-300);border-color:var(--gold-500)}
+
+.reveal{--d:0ms;transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d),transform .9s cubic-bezier(.2,.7,.2,1) var(--d)}
+.reveal.from-left{transform:translateX(-44px)}
+.reveal.from-right{transform:translateX(44px)}
+.reveal.zoom{transform:scale(.93)}
+.reveal.in{opacity:1;transform:none}
+.reveal.done{--d:0ms;transition:opacity .4s,transform .35s ease,box-shadow .35s ease,border-color .35s}
+.reveal.done.lift:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 44px rgba(47,123,255,.4)}
+.masonry button.reveal.done:hover{transform:translateY(-4px)}
+
+.par{transform:translate3d(0,var(--py,0px),0) scale(1.12);will-change:transform}
+
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+#hero .wrap>.reveal:first-child>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+#hero .wrap>.reveal:first-child>:nth-child(2){animation-delay:.12s}
+#hero .wrap>.reveal:first-child>:nth-child(3){animation-delay:.24s}
+#hero .wrap>.reveal:first-child>:nth-child(4){animation-delay:.34s}
+#hero .wrap>.reveal:first-child>:nth-child(5){animation-delay:.42s}
+#hero .wrap>.reveal:first-child>:nth-child(6){animation-delay:.52s}
+
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-photo .photo{animation:floaty 7s ease-in-out infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.waves{position:absolute;left:0;bottom:0;width:200%;height:46%;z-index:-1;opacity:.7;animation:drift 34s linear infinite;pointer-events:none}
+@keyframes twinkle{from{opacity:.3}to{opacity:.75}}
+.slide::after{animation:twinkle 5s ease-in-out infinite alternate}
+.btn{position:relative;overflow:hidden}
+.btn.gold::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);transform:translateX(-120%);transition:transform .7s}
+.btn.gold:hover::after{transform:translateX(120%)}
+.chip{transition:background .25s,transform .25s}
+a.chip:hover{transform:translateY(-2px)}
+.partner{transition:transform .3s,border-color .3s,background .3s}
+.partner:hover{transform:translateY(-4px);border-color:var(--gold-500);background:rgba(217,180,91,.12)}
+
+@keyframes slideIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+body.present .slide.active{animation:slideIn .55s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){.par{transform:none}.waves{animation:none}.progress{display:none}}
