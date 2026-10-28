@@ -112,7 +112,8 @@
     ['fabia-runway', 'FABIA S9 sân khấu'], ['fabia-red-1', 'FABIA S9 áo dài đỏ'],
     ['thanh-am-gom-1', 'Sự kiện Thanh Âm Gốm'], ['roses', 'MC bên hoa hồng đỏ'], ['thanh-am-gom-2', 'Sân khấu Thanh Âm Gốm'],
     ['tag-stage-1', 'Thanh Âm Gốm – MC trên sân khấu'], ['tag-stage-2', 'Thanh Âm Gốm – sân khấu'], ['tag-stage-3', 'Thanh Âm Gốm – dẫn chương trình'],
-    ['tag-stage-4', 'Thanh Âm Gốm – MC Hạ Ly Nguyễn'], ['tag-finale', 'Thanh Âm Gốm – toàn đoàn kết thúc chương trình']
+    ['tag-stage-4', 'Thanh Âm Gốm – MC Hạ Ly Nguyễn'], ['tag-finale', 'Thanh Âm Gốm – toàn đoàn kết thúc chương trình'],
+    ['pulp-paper-1', 'Hội thảo công nghệ bột giấy và giấy'], ['pulp-paper-2', 'Hội thảo công nghệ bột giấy và giấy']
   ];
   var grid = document.getElementById('masonry');
   photos.forEach(function (p, i) {
