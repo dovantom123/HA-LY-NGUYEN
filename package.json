@@ -1,11 +1,12 @@
 {
   "name": "ha-ly-nguyen-profile",
   "version": "1.0.0",
-  "description": "",
+  "description": "MC Ha Ly Nguyen portfolio and editorial Edition II with Animate UI",
   "main": "script.js",
   "scripts": {
     "build": "node build-motion.mjs",
-    "check": "node --check v2.js"
+    "check": "node --check v2.js",
+    "dev": "node dev-server.cjs"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/dovantom123/HA-LY-NGUYEN/issues"
