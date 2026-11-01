@@ -167,6 +167,7 @@
       if (d < best) { best = d; cur = k; }
     });
     document.body.classList.add('present');
+    document.body.classList.add('present');
     show(cur); window.scrollTo(0,0);
     if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(function () {});
   }
