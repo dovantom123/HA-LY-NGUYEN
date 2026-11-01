@@ -90,7 +90,7 @@
   });
   var saved = 'vi';
   try { saved = localStorage.getItem('lang') || 'vi'; } catch (e) {}
-  if (['en', 'zh'].includes(saved)) setLang(saved);
+  if (document.querySelector('[data-lang]') && ['en', 'zh'].includes(saved)) setLang(saved);
 
   /* ---------- reveal on scroll + counters ---------- */
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
