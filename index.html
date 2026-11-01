@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="v2.css?v=3-release">
-<link rel="stylesheet" href="portfolio.css?v=3-release">
+<link rel="stylesheet" href="portfolio.css?v=3-languages">
 <link rel="icon" type="image/jpeg" href="img/ha-ly-nguyen-share-v3.jpg">
 </head>
 <body>
@@ -35,7 +35,7 @@
   <a href="#hero" class="logo" aria-label="MC Hạ Ly Nguyễn"><span class="monogram">HL<span>·</span></span><span class="brand-name">Hạ Ly Nguyễn<small>TRILINGUAL MC</small></span></a>
   <nav class="nav" id="navigation" aria-label="Menu"><a href="#about">Giới thiệu</a><a href="#skills">Năng lực</a><a href="#events">Dự án</a><a href="#values">Phương châm</a><a href="#contact">Booking</a></nav>
   <div class="tools">
-    <span class="edition-label">PORTFOLIO V3 · 2026</span>
+    <div class="language-picker" role="group" aria-label="Language / Ngôn ngữ / 语言"><button type="button" data-site-language="vi" lang="vi" aria-pressed="true" aria-label="Tiếng Việt">VI</button><button type="button" data-site-language="zh" lang="zh" aria-pressed="false" aria-label="中文">中文</button><button type="button" data-site-language="en" lang="en" aria-pressed="false" aria-label="English">EN</button></div>
     <button class="btn-present" id="presentBtn">Trình chiếu</button>
     <button class="menu-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Mở menu"><span></span><span></span></button>
   </div>
@@ -98,6 +98,7 @@
 </div>
 
 <script src="v2.js?v=3-release"></script>
-<script defer src="assets/animate-v2.js?v=3-release"></script>
+<script defer src="assets/animate-v2.js?v=3-languages"></script>
+<script defer src="languages-v3.js?v=1"></script>
 </body>
 </html>

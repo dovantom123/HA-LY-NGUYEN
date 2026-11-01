@@ -8,7 +8,7 @@ import {RippleButton, RippleButtonRipples} from '@animate-ui/react/primitives/bu
 import {Slide} from '@animate-ui/react/primitives/effects/slide';
 import {spring, transition} from '@animate-ui/react/utils/motion';
 
-const labels={vi:{book:'Liên hệ booking',statement:<>Kết nối ngôn ngữ.<br/>Dẫn dắt cảm xúc.</>},en:{book:'Book now',statement:<>One voice.<br/>Countless connections.</>},zh:{book:'预约合作',statement:<>一种声音。<br/>连接万千故事。</>}};
+const labels={vi:{book:'Liên hệ booking',statement:<>Kết nối ngôn ngữ.<br/>Dẫn dắt cảm xúc.</>},en:{book:'Book now',statement:<>Connecting languages.<br/>Inspiring emotions.</>},zh:{book:'预约合作',statement:<>连接语言。<br/>传递情感。</>}};
 function useLang(){const [lang,setLang]=useState(document.documentElement.lang);useEffect(()=>{const ob=new MutationObserver(()=>setLang(document.documentElement.lang));ob.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});return()=>ob.disconnect();},[]);return labels[lang]?lang:'vi';}
 function Link({href,children,className='',external=false}){return <RippleButton asChild tapScale={.985} hoverScale={1.015}><a href={href} className={className} {...(external?{target:'_blank',rel:'noopener noreferrer'}:{})}><span>{children}</span><span aria-hidden="true">↗</span><RippleButtonRipples color="rgba(193,163,109,.32)"/></a></RippleButton>;}
 function MotionController(){useEffect(()=>{
